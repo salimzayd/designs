@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap Colors</title>
+    <style>
+        #div1, #div2 {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <button onclick="swapColors()">Swap</button>
+
+    <script>
+        // Set initial colors using JavaScript
+        document.getElementById('div1').style.backgroundColor = 'red';
+        document.getElementById('div2').style.backgroundColor = 'blue';
+
+        function swapColors() {
+            const div1 = document.getElementById('div1');
+            const div2 = document.getElementById('div2');
+
+            // Get the current background colors
+            const color1 = div1.style.backgroundColor;
+            const color2 = div2.style.backgroundColor;
+
+            // Swap the colors
+            div1.style.backgroundColor = color2;
+            div2.style.backgroundColor = color1;
+        }
+    </script>
+</body>
+</html>
